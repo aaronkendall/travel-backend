@@ -10,7 +10,8 @@ let returnData = {
     'destinationAirport': 'Barcelona (ABC)',
     'destinationCity': 'Barcelona',
     'destinationCountry': 'Spain',
-    'carrierName': 'EasyJet'
+    'carrierName': 'EasyJet',
+    'departureDate': ''
   },
   'inboundFlight': {
     'originAirport': 'Barcelona (ABC)',
@@ -18,7 +19,8 @@ let returnData = {
     'destinationAirport': 'London Stansted (STN)',
     'destinationCity': 'London',
     'destinationCountry': 'United Kingdom',
-    'carrierName': 'EasyJet'
+    'carrierName': 'EasyJet',
+    'departureDate': ''
   },
   'price': 78
 }
@@ -31,6 +33,8 @@ router.post('/', function(req, res, next) {
   //       organiseFlightResponse(JSON.parse(body));
   //     }
   //   });
+  returnData.outboundFlight.departureDate = req.body.startDate;
+  returnData.inboundFlight.departureDate = req.body.endDate;
   res.json(returnData);
 });
 
