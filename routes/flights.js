@@ -32,7 +32,7 @@ const organiseFlightResponse = function(data) {
   };
   let returnData = [];
 
-  quotesArray.map(function(quote) {
+  quotesArray.forEach(function(quote) {
     returnObject.price = quote.MinPrice;
     returnObject.direct = quote.Direct;
     returnObject.quoteDate = quote.QuoteDateTime.split('T');
