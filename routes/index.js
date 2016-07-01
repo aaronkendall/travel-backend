@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Travel backend is live!' });
+    res.render('index', { title: 'Travel backend is live!' });
 });
 
 module.exports = router;
