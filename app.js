@@ -9,6 +9,7 @@ var cors = require('cors');
 
 var routes = require('./routes/index');
 var flights = require('./routes/flights');
+var autosuggest = require('./routes/autosuggest');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use(cors());
 
 app.use('/', routes);
 app.use('/flights', flights);
+app.use('/autosuggest', autosuggest);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
